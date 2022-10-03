@@ -28,15 +28,15 @@ function Tutorials() {
     getData();
   };
 
-  const handleSearch=()=>{
-
+  const handleSearch=(e)=>{
+    console.log(e.target.value)
   }
 
   return (
     <div className={css.maincontainer}>
       <div className={css.search}>
-        <input type="text" placeholder="Search by title" />
-        <button onClick={handleSearch} className={css.searchbtn}>Search</button>
+        <input type="text" onChange={(e)=>{handleSearch()}} placeholder="Search by title" />
+        <button className={css.searchbtn}>Search</button>
       </div>
       <div className={css.container}>
         <div className={css.viewTitle}>
@@ -54,14 +54,13 @@ function Tutorials() {
             <tbody className="table-group-divider">
               {users.map((el, i) => (
                 <tr className={css.titleclick} key={el._id}>
-                  <th scope="row">{i + 1}</th>
+                  <th scope="row">{i+1}</th>
                   <td>
                     <h5
                       onClick={() => {
                         handleChange(el._id);
                         handleActive(true);
-                      }}
-                    >
+                      }}>
                       {el.title}
                     </h5>
                   </td>
