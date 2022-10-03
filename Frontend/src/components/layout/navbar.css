@@ -1,0 +1,23 @@
+.navbar{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    /* border: 1px solid red; */
+    height: 60px;
+    background-color:black;
+    padding-left: 50px;
+
+}
+.navbar>.a{
+text-decoration: none;
+color: gray;
+font-size: 25px;
+}
+.a:hover {
+    color:aliceblue;
+}
+.logo{
+    color: white;
+    text-decoration: none;
+}
